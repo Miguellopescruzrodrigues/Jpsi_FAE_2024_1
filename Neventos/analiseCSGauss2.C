@@ -110,7 +110,7 @@ void analiseCSGauss2() {
     TH1S *hJpsiMassCut = new TH1S("JpsiMass", "", 200, 2.9, 3.3); 
 
 
-    TChain* fChain = new TChain("oniaTree", "");
+    TChain* fChain = new TChain("oniaTree;4", "");
     fChain->Add("Skim4.root");
 
     fChain->SetBranchAddress("event", &event, &b_event);
